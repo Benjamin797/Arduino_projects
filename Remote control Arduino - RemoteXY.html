@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<title>Remote control Arduino - RemoteXY</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="Online designer of graphical interface to control Arduino via smartphone or tablet">
+<meta name="keywords" content="remotexy, remote control, device control, control over bluetooth, source code, projects, Arduino, Bluetooth, Android">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/style_v3_3.css">
+<link rel="stylesheet" href="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/editor.css">
+<script type="text/javascript" src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/std_v3.js"></script>
+<script type="text/javascript" src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/editor.js"></script>
+<link rel="alternate" type="application/rss+xml" href="https://remotexy.com/en/rss" title="Remote control Arduino - RemoteXY">
+</head>
+<body onload="run ();" data-new-gr-c-s-check-loaded="8.872.0" data-gr-ext-installed="">
+<div id="content">
+
+<div class="content_row"><div class="content_cell" style="height: 70px;">
+<div class="header" id="header">
+ <div class="header_logo"><a href="https://remotexy.com/en/"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/logo.png"></a></div>
+ <div class="hide_tablet"><div class="header_menu">
+  <div></div>
+  <div><a href="https://remotexy.com/en/editor/" title="Interfaces editor">EDITOR</a></div>
+  <div><a href="https://remotexy.com/en/download/" title="Download application">APP</a></div>
+  <div><a href="https://remotexy.com/en/help/" title="How RemoteXY works">HOW IT WORKS</a></div>
+  <div><a href="https://remotexy.com/en/examples/" title="Examples of projects">EXAMPLES</a></div>
+  <div><a href="https://remotexy.com/en/forum/" title="RemoteXY community" target="_blank">COMMUNITY</a></div>
+  <div><a href="https://remotexy.com/en/blog/" title="Blog">BLOG</a></div>
+  <div><a id="loginLink" href="https://remotexy.com/en/login/" title="Sign" onclick="openLoginWindow (''); return false;">SIGN</a>
+</div>
+  <div><a href="https://remotexy.com/en/editor/" onclick="return openLangWindow ();"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/en.png"></a>
+</div>
+ </div></div>
+ <div class="show_tablet"><div class="header_menu">
+  <div><a href="https://remotexy.com/" onclick="Windows_OpenAsMenu ('window_mobile_menu',0); return false;"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/menu.png"></a></div> 
+ </div></div>
+</div>
+</div></div>
+
+<div class="content_row"><div class="content_cell"><div class="editor_content" id="editor_content">
+<div id="editor_leftcol">
+ <div class="editor_col_header">
+  <div class="editor_col_close" onclick="Windows_Close ('editor_leftcol');"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/left2x.png"></div>
+  <div class="editor_col_name">Elements</div>
+ </div>
+ <div class="editor_col_groups" id="editor_left_groups" style="min-height: 796px;"><div class="editor_col_group_name" onclick="onclickToolsGroup('controls');"><img id="img_controls" src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/down.png">Controls</div><div class="editor_col_group_body" id="tools_controls" style="display:block;"><div class="editor_col_group_cont"><div class="editor_controls_item" onmousedown="return onmousedownControl (0, event);" ontouchstart="return onmousedownControl (0, event);" ondrag="return false;"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/button.png"><p>Button</p></div><div class="editor_controls_item" onmousedown="return onmousedownControl (1, event);" ontouchstart="return onmousedownControl (1, event);" ondrag="return false;"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/switch.png"><p>Switch</p></div><div class="editor_controls_item" onmousedown="return onmousedownControl (2, event);" ontouchstart="return onmousedownControl (2, event);" ondrag="return false;"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/select.png"><p>Select</p></div><div class="editor_controls_item" onmousedown="return onmousedownControl (3, event);" ontouchstart="return onmousedownControl (3, event);" ondrag="return false;"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/slider.png"><p>Slider</p></div><div class="editor_controls_item" onmousedown="return onmousedownControl (4, event);" ontouchstart="return onmousedownControl (4, event);" ondrag="return false;"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/joystick.png"><p>Joystick</p></div><div class="editor_controls_item" onmousedown="return onmousedownControl (5, event);" ontouchstart="return onmousedownControl (5, event);" ondrag="return false;"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/rgb.png"><p>RGB color</p></div><div class="editor_controls_item" onmousedown="return onmousedownControl (6, event);" ontouchstart="return onmousedownControl (6, event);" ondrag="return false;"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/edittext.png"><p>Edit field</p></div></div></div><div class="editor_col_group_name" onclick="onclickToolsGroup('indications');"><img id="img_indications" src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/down.png">Indication</div><div class="editor_col_group_body" id="tools_indications" style="display: block;"><div class="editor_col_group_cont"><div class="editor_controls_item" onmousedown="return onmousedownControl (7, event);" ontouchstart="return onmousedownControl (7, event);" ondrag="return false;"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/diode.png"><p>Led</p></div><div class="editor_controls_item" onmousedown="return onmousedownControl (8, event);" ontouchstart="return onmousedownControl (8, event);" ondrag="return false;"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/level1.png"><p>Linear level</p></div><div class="editor_controls_item" onmousedown="return onmousedownControl (9, event);" ontouchstart="return onmousedownControl (9, event);" ondrag="return false;"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/level2.png"><p>Arc level</p></div><div class="editor_controls_item" onmousedown="return onmousedownControl (10, event);" ontouchstart="return onmousedownControl (10, event);" ondrag="return false;"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/level3.png"><p>Linear division level</p></div><div class="editor_controls_item" onmousedown="return onmousedownControl (11, event);" ontouchstart="return onmousedownControl (11, event);" ondrag="return false;"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/level4.png"><p>Arc division level</p></div><div class="editor_controls_item" onmousedown="return onmousedownControl (12, event);" ontouchstart="return onmousedownControl (12, event);" ondrag="return false;"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/text2.png"><p>Text string</p></div><div class="editor_controls_item" onmousedown="return onmousedownControl (13, event);" ontouchstart="return onmousedownControl (13, event);" ondrag="return false;"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/onlinegraph.png"><p>Online graph</p></div><div class="editor_controls_item" onmousedown="return onmousedownControl (14, event);" ontouchstart="return onmousedownControl (14, event);" ondrag="return false;"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/sound.png"><p>Sound</p></div></div></div><div class="editor_col_group_name" onclick="onclickToolsGroup('decorations');"><img id="img_decorations" src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/down.png">Decoration</div><div class="editor_col_group_body" id="tools_decorations" style="display: block;"><div class="editor_col_group_cont"><div class="editor_controls_item" onmousedown="return onmousedownControl (15, event);" ontouchstart="return onmousedownControl (15, event);" ondrag="return false;"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/label.png"><p>Label</p></div><div class="editor_controls_item" onmousedown="return onmousedownControl (16, event);" ontouchstart="return onmousedownControl (16, event);" ondrag="return false;"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/panel.png"><p>Panel</p></div><div class="editor_controls_item" onmousedown="return onmousedownControl (17, event);" ontouchstart="return onmousedownControl (17, event);" ondrag="return false;"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/page.png"><p>Page</p></div></div></div></div>
+</div>
+<div id="editor_centercol">
+ <div class="editor_projectname_line">
+  <div class="editor_projectname_button" onclick="openLeftCol ();"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/add2x.png"></div>
+  <div class="editor_projectname_name" id="projectname">New project *</div>
+  <div class="editor_projectname_button" onclick="openRightCol ();"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/settings2x.png"></div>
+ </div>
+ <div class="editor_field">
+   <div class="editor_menu_line">
+    <div class="editor_menu_item_button_green"><div onclick="return OnClickNewProject ();" title="New project"><img style="padding: 7px 0 0 9px;" src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/button_new.png"></div></div>
+    <div class="editor_menu_item_button_green"><div onclick="return OnClickOpenProject ();" title="Open project"><img style="padding: 9px 0 0 7px;" src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/button_open.png"></div></div>
+    <div class="editor_menu_item_button_green"><div onclick="return OnClickSaveProject ();" title="Save project"><img style="padding: 7px 0 0 8px;" src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/button_save.png"></div></div>
+    <div class="editor_menu_item_button_green"><div onclick="return OnClickSaveProjectAs ();" title="Save project as..."><img style="padding: 7px 0 0 8px;" src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/button_saveas.png"></div></div>
+    <div class="editor_menu_item_getcode"><div onclick="return onclickGetSourceCode ();"><span class="hide_mobile">Get source code</span><span class="show_mobile">Get code</span></div></div> 
+   </div>
+   <div class="editor_menu_line">
+    <div class="editor_menu_item_button_orange" id="editor_button_horizontal" style="display:none;"><div onclick="return OnClickOrientation (0);" title="Horizontal orientation"><img style="padding: 10px 0 0 5px;" src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/button_horizontal.png"></div></div>
+    <div class="editor_menu_item_button_orange" id="editor_button_vertical" style="display:none;"><div onclick="return OnClickOrientation (1);" title="Vertical orientation"><img style="padding: 5px 0 0 10px;" src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/button_vertical.png"></div></div>
+   </div>
+    <img id="editor_phone" src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/phone.png" style="top: 176px; left: 87px; width: 985px; height: 548px;">
+   <canvas id="editor" class="editor_screen" width="764" height="482" style="cursor: default; top: 209px; left: 197px; width: 764px; height: 482px;">
+    <div class="editor_screen_error">You browser<br>does not support HTML 5.0</div>
+   </canvas>
+ </div>
+</div>
+<div id="editor_rightcol">
+ <div class="editor_col_header">
+   <div class="editor_col_name">Properties</div>
+   <div class="editor_col_close" onclick="Windows_Close ('editor_rightcol');"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/right2x.png"></div>
+ </div>
+ <div class="editor_col_groups" id="editor_right_groups" style="min-height: 796px;"><div class="editor_col_group_name" onclick="onclickToolsGroup('scheme');"><img id="img_scheme" src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/down.png">Configuration</div><div class="editor_col_group_body" id="tools_scheme" style="display:block;"><div class="editor_col_group_cont"><div class="editor_configuration_item" onclick="return onClickChangeScheme ('connection');"><div class="editor_configuration_item_img"><div><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/bluetooth_s1.jpg"></div></div><div class="editor_configuration_item_name">Bluetooth</div></div><div class="editor_configuration_item" onclick="return onClickChangeScheme ('device');"><div class="editor_configuration_item_img"><div><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/arduino-uno_s1.jpg"></div></div><div class="editor_configuration_item_name">Arduino UNO</div></div><div class="editor_configuration_item" onclick="return onClickChangeScheme ('module');"><div class="editor_configuration_item_img"><div><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/hc-05-bluetooth-module_s1.jpg"></div></div><div class="editor_configuration_item_name">HC-05(06) Bluetooth module</div></div><div class="editor_configuration_item" onclick="return onClickChangeScheme ('ide');"><div class="editor_configuration_item_img"><div><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/arduino-ide_s1.jpg"></div></div><div class="editor_configuration_item_name">Arduino IDE</div></div></div></div><div class="editor_col_group_name" onclick="onclickToolsGroup('interface');"><img id="img_interface" src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/down.png">Module interface</div><div class="editor_col_group_body" id="tools_interface" style="display:block;"><div class="editor_col_group_cont"><div class="editor_settings_item" style="width: 100%;"><p>Connection interface:</p><select id="st_arduino_interface" class="editor_settings_input" onchange="return onchangeSetting ('st_arduino_interface');"><option value="softwareserial" selected="selected">Software Serial</option><option value="hardwareserial">Hardware Serial</option></select></div><div class="editor_settings_item" style="width: 50%;"><p>RX pin:</p><select id="st_arduino_rx" class="editor_settings_input" onchange="return onchangeSetting ('st_arduino_rx');"><option value="2" selected="selected">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13(LED)</option><option value="A0">A0(14)</option><option value="A1">A1(15)</option><option value="A2">A2(16)</option><option value="A3">A3(17)</option><option value="A4">A4(18)</option><option value="A5">A5(19)</option></select></div><div class="editor_settings_item" style="width: 50%;"><p>TX pin:</p><select id="st_arduino_tx" class="editor_settings_input" onchange="return onchangeSetting ('st_arduino_tx');"><option value="2">2</option><option value="3" selected="selected">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13(LED)</option><option value="A0">A0(14)</option><option value="A1">A1(15)</option><option value="A2">A2(16)</option><option value="A3">A3(17)</option><option value="A4">A4(18)</option><option value="A5">A5(19)</option></select></div><div class="editor_settings_item" style="width: 100%;"><p>Speed (baud rate):</p><select id="st_arduino_speed" class="editor_settings_input" onchange="return onchangeSetting ('st_arduino_speed');"><option value="2400">2400</option><option value="4800">4800</option><option value="9600" selected="selected">9600</option><option value="19200">19200</option></select></div></div></div><div class="editor_col_group_name" onclick="onclickToolsGroup('view');"><img id="img_view" src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/down.png">View</div><div class="editor_col_group_body" id="tools_view" style="display:block;"><div class="editor_col_group_cont"><div class="editor_settings_item"><p>Background color:</p><div onclick="OnClickContextColor(event,'st_backgroundcolor', 8);"><div class="editor_settings_color" style="background-color:#292929;"></div><div class="editor_settings_a" style="padding: 4px 0 0 10px;">Change...</div></div></div><div class="editor_settings_item" style="width: 100%;"><p>Orientation:</p><select id="st_orientation" class="editor_settings_input" onchange="return onchangeSetting ('st_orientation');"><option value="0" selected="selected">Horizontal</option><option value="1">Vertical</option><option value="2">Both</option></select></div><div class="editor_settings_item" style="width: 100%;"><p>Access password:</p><input type="text" id="st_password" class="editor_settings_input" autocomplete="off" onchange="return onchangeSetting ('st_password');"></div></div></div></div>
+</div>
+</div>
+
+
+<div id="window_cookie" class="window_cookie" style="bottom: -70px;">
+<div class="window_cookie_el w100">
+This website uses cookies to ensure you get the best experience on our website
+<a href="https://remotexy.com/en/cookieinfo/">Learn more</a>
+</div>
+<div class="window_cookie_el window_cookie_link" onclick="closeCookieWindow('decline');" style="display: none;">Decline</div>
+<div class="window_cookie_el"><div class="window_cookie_button" onclick="closeCookieWindow('allow');"><nobr>Allow cookies</nobr></div></div>
+</div>
+<script type="text/javascript">
+function openCookieWindow () {
+  var bottom = -70;
+  var el = document.getElementById("window_cookie");
+  var timer = setInterval (function() {
+    el.style.bottom=bottom+'px';
+    bottom=bottom+5;
+    if (bottom>0) clearTimeout (timer);
+ }, 50);
+}
+function closeCookieWindow (act) {
+  var el = document.getElementById("window_cookie");
+  el.style.bottom='-70px';
+  var xmlhttp = getXmlHttp(); 
+  xmlhttp.open('GET', '/cookie/?action='+act, true);
+  xmlhttp.send(null);
+}
+
+var openCookieWindowTimer = setTimeout (openCookieWindow, 2000);
+
+
+</script>
+<style type="text/css">
+.window_cookie {
+ position: fixed;
+ bottom: -70px;
+ height: 70px;
+ width: 100%; 
+ background-color:#229999; 
+ color: #fff; 
+ font-size: 12px; 
+ display:table; 
+}
+
+.window_cookie_el {
+ display: table-cell; 
+ height:100%;
+ padding: 0 30px; 
+ vertical-align:middle;
+}
+.window_cookie_el a {
+ color: #ccc; 
+ text-decoration: underline;
+ padding: 0 10px;
+ transition: 0.2s;
+}
+.window_cookie_el a:hover {
+ color: #fff; 
+}
+.window_cookie_link {
+  cursor: pointer;
+ transition: 0.2s;
+}
+.window_cookie_link:hover {
+ text-decoration: underline;
+}
+.window_cookie_button {
+ display: table-cell; 
+ height: 32px; 
+ background-color:#66FFAA; 
+ color: #000; 
+ font-weight: bold; 
+ padding: 0 20px; 
+ vertical-align:middle; 
+ -webkit-border-radius:6px; 
+ -moz-border-radius:6px; 
+ border-radius:6px;
+ cursor: pointer;
+ transition: 0.2s;
+}
+.window_cookie_button:hover {
+ background-color:#8CFFD0; 
+}
+@media screen and (max-width: 767px) {
+ .window_cookie_el {
+   padding: 0 5px; 
+   text-align: center;
+ }
+ .window_cookie_button {
+  padding: 0 5px; 
+ }
+}
+
+</style></div></div>
+<div class="content_row"><div class="content_cell" style="height: 50px;">
+<div class="footer" id="footer">
+ <div class="footer_menu">
+  <div class="footer_menu_item hide_tablet">
+   <a href="https://remotexy.com/en/">Main page</a><br>
+   <a href="https://remotexy.com/en/editor/">Editor</a>
+   </div>
+  <div class="footer_menu_item hide_tablet">
+    <a href="https://remotexy.com/en/help/">How it works</a><br>
+    <a href="https://remotexy.com/en/examples/">Examples</a>
+   </div>
+  <div class="footer_menu_item">
+    <a href="https://remotexy.com/en/download/">App</a><br>
+    <a href="https://remotexy.com/en/library/">Library</a>
+   </div>
+  <div class="footer_menu_item">
+    <a href="https://remotexy.com/en/blog/">Blog</a><br>
+    <a href="https://remotexy.com/en/forum/" target="_blank">Community</a>
+   </div>
+  <div class="footer_menu_item">
+    <a href="https://remotexy.com/en/privacy/">Privacy Policy</a><br>
+    <a href="https://remotexy.com/en/contact/">Contact</a>
+  </div>
+ </div>
+ <div class="footer_social hide_mobile">
+  <a href="http://remotexy.com/en/rss" target="_blank"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/logo_rss.gif"></a> 
+  <a href="https://www.facebook.com/remotexy" target="_blank"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/logo_fb.gif"></a> 
+  <a href="https://vk.com/remotexy" target="_blank"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/logo_vk.gif"></a> 
+  <a href="https://twitter.com/RemoteXY" target="_blank"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/logo_tw.gif"></a> 
+</div>
+</div>
+</div></div>
+</div>
+ 
+<div id="windows" style="display: none;">
+
+<div id="windows_place">
+<div id="window_login" class="window window_form" style="display:none;">
+<div class="window_header">
+ <div class="window_header_name">Sign in</div>
+ <div class="window_header_close"><a href="#" onclick="Windows_Close (); return false;">Close</a></div>
+</div>   
+<div class="window_message" id="window_login_message" style="display:none;"></div>
+<div class="window_body">
+ <form id="window_login_form" action="/en/login/" method="POST">
+ <div class="window_item">
+  <div class="window_item_name">Email:</div>
+  <input type="text" id="win_login_name" class="window_input w100" name="email">
+ </div>
+ <div class="window_item">
+  <div class="window_item_name">Password:</div>
+  <input type="password" id="win_login_pass" class="window_input w100" name="pass">
+ </div>
+ <div class="window_link"><a href="https://remotexy.com/en/forgotpassword/">Forgot password?</a></div>
+ <div class="window_line">
+ <div class="window_buttons_left">
+  <div class="window_button"><a href="#" onclick="document.getElementById('window_login_form').submit(); return false;">Sign in</a></div>
+  <div class="window_button"><a href="https://remotexy.com/en/registration/">Create account</a></div>
+ </div>
+ </div>
+ </form>
+</div>
+</div>
+<script type="text/javascript">
+function openLoginWindow (m) {
+ var d=document.getElementById('window_login_message');
+ d.innerHTML=m;
+ if (m=='') d.style.display="none";
+ else d.style.display="block";
+ Windows_Open ('window_login');
+}
+</script><div id="window_mobile_menu" class="window window_mobile_menu" style="display:none;">
+<div class="window_header">
+ <div class="window_header_name"></div>
+ <div class="window_header_close"><a href="#" onclick="Windows_Close (); return false;">Close</a></div>
+</div>
+<div class="window_body">
+<div class="window_mobile_menu_items">
+<div><a href="https://remotexy.com/en/editor/">EDITOR</a></div>
+<div><a href="https://remotexy.com/en/download/">APP</a></div>
+<div><a href="https://remotexy.com/en/help/">HOW IT WORKS</a></div>
+<div><a href="https://remotexy.com/en/examples/">EXAMPLES</a></div>
+<div><a href="https://remotexy.com/en/forum/" onclick="Windows_Close ('window_mobile_menu');" target="_blank">COMMUNITY</a></div>
+<div><a href="https://remotexy.com/en/blog/" title="Blog">BLOG</a></div>
+<div><a id="loginLink" href="https://remotexy.com/en/login/" title="Sign" onclick="openLoginWindow (''); return false;">SIGN</a>
+</div>
+<div><a href="https://remotexy.com/en/editor/" onclick="return openLangWindow ();"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/en.png"></a>
+</div>
+</div></div></div>
+<div id="win_nosave" class="window window_form" style="display:none;">
+<div class="window_header">
+ <div class="window_header_name">The project is not saved</div>
+ <div class="window_header_close"><a href="#" onclick="Windows_Close ('win_nosave'); return false;">Close</a></div>
+</div>   
+<div class="window_message" id="window_nosave_message">Save the current project?</div>
+<div class="window_body">
+<div class="window_line"><div class="window_buttons_left">
+ <div class="window_button"><a id="win_nosave_button_save" href="#" onclick="return false;">Save</a></div>
+ <div class="window_button"><a id="win_nosave_button_nosave" href="#" onclick="return false;">Not save</a></div>
+</div></div>
+</div>
+</div>
+
+<div id="win_saveas" class="window window_form" style="display:none;">
+<div class="window_header">
+ <div class="window_header_name">Save project as</div>
+ <div class="window_header_close"><a href="#" onclick="Windows_Close ('win_saveas'); return false;">Close</a></div>
+</div>   
+<div class="window_body">
+ <div class="window_item">
+  <div class="window_item_name">Project name:</div>
+  <input type="text" id="win_saveas_name" class="window_input w100">
+ </div>
+<div class="window_line"><div class="window_buttons_left">
+ <div class="window_button"><a id="win_saveas_button_save" href="#" onclick="return false;">Save</a></div>
+ <div class="window_button"><a href="#" onclick="Windows_Close ('win_saveas'); return false;">Not save</a></div>
+</div></div>
+</div>
+</div>
+
+<div id="win_message_save_ok" class="window window_form" style="display:none;">
+<div class="window_header">
+ <div class="window_header_name">Project was saved</div>
+ <div class="window_header_close"><a href="#" onclick="Windows_Close ('win_message_save_ok'); return false;">Close</a></div>
+</div>   
+<div class="window_message">The project was successfully saved</div>
+<div class="window_body">
+<div class="window_line"><div class="window_buttons_left">
+ <div class="window_button"><a href="#" onclick="Windows_Close ('win_message_save_ok'); return false;">Not save</a></div>
+</div></div>
+</div>
+</div>
+
+<div id="win_question_save" class="window window_form" style="display:none;">
+<div class="window_header">
+ <div class="window_header_name">Project already exists</div>
+ <div class="window_header_close"><a href="#" onclick="Windows_Close ('win_question_save'); return false;">Close</a></div>
+</div>   
+<div class="window_message">A project with this name already exists. To continue saving the project?</div>
+<div class="window_body">
+<div class="window_line"><div class="window_buttons_left">
+ <div class="window_button"><a id="win_question_save_button_save" href="#" onclick="return false;">Save</a></div>
+ <div class="window_button"><a href="#" onclick="Windows_Close ('win_question_save'); return false;">Not save</a></div>
+</div></div>
+</div> 
+</div>
+
+<div id="win_saveerror" class="window window_form" style="display:none;">
+<div class="window_header">
+ <div class="window_header_name">The project is not saved</div>
+ <div class="window_header_close"><a href="#" onclick="Windows_Close ('win_saveerror'); return false;">Close</a></div>
+</div>   
+<div class="window_message" id="window_nosave_message">An error occurred while saving project. The project is not saved.</div>
+<div class="window_body">
+<div class="window_line"><div class="window_buttons_left">
+ <div class="window_button"><a href="#" onclick="Windows_Close ('win_saveerror'); return false;">Close</a></div>
+</div></div>
+</div>
+</div>
+
+<div id="window_scheme" class="window window_scheme" style="display:none;">
+<div class="window_body">
+  <div id="window_scheme_body" class="window_scheme_body"></div>
+  <div class="window_scheme_button_line"><div class="window_buttons_left">
+   <div class="window_button"><div id="window_scheme_button_apply">Apply</div></div>
+   <div class="window_button"><div onclick="Windows_Close (); return false;">Cancel</div></div>
+  </div></div>
+</div>
+</div>
+
+
+
+
+</div>
+</div>      
+<div id="actions" style="display: none;">
+<div id="action_lang" class="window_lang" style="display:none;">
+ <div class="window_lang_item"><a class="div_topmenu_item" href="https://remotexy.com/en/editor/"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/en.png">English</a></div>
+ <div class="window_lang_item"><a class="div_topmenu_item" href="https://remotexy.com/ru/editor/"><img src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/ru.png">Русский</a></div>
+</div>
+<script type="text/javascript">
+function openLangWindow () {
+ var hel=getElementPosition(document.getElementById('header'));
+ Windows_Close ();
+ Actions_Open ("action_lang", hel.left+hel.width-40, 70, 1);
+ return false;             
+}
+</script><div id="div_contextmenu" class="editor_contextmenu" style="display: none; position: absolute; left: 1370px; top: 486px;"><div style="background-color:#f8f8f8"><div><div class="editor_context_color" style="background-color:#f2f2f2;" onmousedown="onchangeSetting('el_color_16');"></div><div class="editor_context_color" style="background-color:#ffc790;border: 2px #C22EFF solid;" onmousedown="onchangeSetting('el_color_17');"></div><div class="editor_context_color" style="background-color:#ffe0e0;" onmousedown="onchangeSetting('el_color_18');"></div><div class="editor_context_color" style="background-color:#feffae;" onmousedown="onchangeSetting('el_color_19');"></div><div class="editor_context_color" style="background-color:#c0ffbb;" onmousedown="onchangeSetting('el_color_20');"></div><div class="editor_context_color" style="background-color:#bbfff3;" onmousedown="onchangeSetting('el_color_21');"></div><div class="editor_context_color" style="background-color:#d3c4ff;" onmousedown="onchangeSetting('el_color_22');"></div><div class="editor_context_color" style="background-color:#fdd1fa;" onmousedown="onchangeSetting('el_color_23');"></div></div><div><div class="editor_context_color" style="background-color:#aeaeae;" onmousedown="onchangeSetting('el_color_0');"></div><div class="editor_context_color" style="background-color:#ed1111;" onmousedown="onchangeSetting('el_color_1');"></div><div class="editor_context_color" style="background-color:#ff8d20;" onmousedown="onchangeSetting('el_color_2');"></div><div class="editor_context_color" style="background-color:#dfe52f;" onmousedown="onchangeSetting('el_color_3');"></div><div class="editor_context_color" style="background-color:#7cb264;" onmousedown="onchangeSetting('el_color_4');"></div><div class="editor_context_color" style="background-color:#6d9cd4;" onmousedown="onchangeSetting('el_color_5');"></div><div class="editor_context_color" style="background-color:#1d1dcd;" onmousedown="onchangeSetting('el_color_6');"></div><div class="editor_context_color" style="background-color:#ad689e;" onmousedown="onchangeSetting('el_color_7');"></div></div><div><div class="editor_context_color" style="background-color:#292929;" onmousedown="onchangeSetting('el_color_8');"></div><div class="editor_context_color" style="background-color:#9b3b3b;" onmousedown="onchangeSetting('el_color_9');"></div><div class="editor_context_color" style="background-color:#ce9600;" onmousedown="onchangeSetting('el_color_10');"></div><div class="editor_context_color" style="background-color:#b2b400;" onmousedown="onchangeSetting('el_color_11');"></div><div class="editor_context_color" style="background-color:#1c8200;" onmousedown="onchangeSetting('el_color_12');"></div><div class="editor_context_color" style="background-color:#019a91;" onmousedown="onchangeSetting('el_color_13');"></div><div class="editor_context_color" style="background-color:#4856ae;" onmousedown="onchangeSetting('el_color_14');"></div><div class="editor_context_color" style="background-color:#9a017f;" onmousedown="onchangeSetting('el_color_15');"></div></div><div><div class="editor_context_color" style="background-color:#000000;" onmousedown="onchangeSetting('el_color_24');"></div><div class="editor_context_color" style="background-color:#242424;" onmousedown="onchangeSetting('el_color_25');"></div><div class="editor_context_color" style="background-color:#484848;" onmousedown="onchangeSetting('el_color_26');"></div><div class="editor_context_color" style="background-color:#6c6c6c;" onmousedown="onchangeSetting('el_color_27');"></div><div class="editor_context_color" style="background-color:#919191;" onmousedown="onchangeSetting('el_color_28');"></div><div class="editor_context_color" style="background-color:#b6b6b6;" onmousedown="onchangeSetting('el_color_29');"></div><div class="editor_context_color" style="background-color:#dadada;" onmousedown="onchangeSetting('el_color_30');"></div><div class="editor_context_color" style="background-color:#ffffff;" onmousedown="onchangeSetting('el_color_31');"></div></div><div><div class="editor_context_color" style="background-color:#3f0000;" onmousedown="onchangeSetting('el_color_32');"></div><div class="editor_context_color" style="background-color:#700000;" onmousedown="onchangeSetting('el_color_33');"></div><div class="editor_context_color" style="background-color:#a00000;" onmousedown="onchangeSetting('el_color_34');"></div><div class="editor_context_color" style="background-color:#d10000;" onmousedown="onchangeSetting('el_color_35');"></div><div class="editor_context_color" style="background-color:#ff0000;" onmousedown="onchangeSetting('el_color_36');"></div><div class="editor_context_color" style="background-color:#ff2b2b;" onmousedown="onchangeSetting('el_color_37');"></div><div class="editor_context_color" style="background-color:#ff5656;" onmousedown="onchangeSetting('el_color_38');"></div><div class="editor_context_color" style="background-color:#ff8282;" onmousedown="onchangeSetting('el_color_39');"></div><div class="editor_context_color" style="background-color:#ffadad;" onmousedown="onchangeSetting('el_color_40');"></div><div class="editor_context_color" style="background-color:#ffd8d8;" onmousedown="onchangeSetting('el_color_41');"></div><div class="editor_context_color" style="background-color:#e2aeae;" onmousedown="onchangeSetting('el_color_42');"></div><div class="editor_context_color" style="background-color:#c78989;" onmousedown="onchangeSetting('el_color_43');"></div><div class="editor_context_color" style="background-color:#ad7171;" onmousedown="onchangeSetting('el_color_44');"></div><div class="editor_context_color" style="background-color:#8b5858;" onmousedown="onchangeSetting('el_color_45');"></div></div><div><div class="editor_context_color" style="background-color:#4c1300;" onmousedown="onchangeSetting('el_color_46');"></div><div class="editor_context_color" style="background-color:#7a1e00;" onmousedown="onchangeSetting('el_color_47');"></div><div class="editor_context_color" style="background-color:#a82a00;" onmousedown="onchangeSetting('el_color_48');"></div><div class="editor_context_color" style="background-color:#d63500;" onmousedown="onchangeSetting('el_color_49');"></div><div class="editor_context_color" style="background-color:#ff3f00;" onmousedown="onchangeSetting('el_color_50');"></div><div class="editor_context_color" style="background-color:#ff602b;" onmousedown="onchangeSetting('el_color_51');"></div><div class="editor_context_color" style="background-color:#ff8056;" onmousedown="onchangeSetting('el_color_52');"></div><div class="editor_context_color" style="background-color:#ffa182;" onmousedown="onchangeSetting('el_color_53');"></div><div class="editor_context_color" style="background-color:#ffc1ad;" onmousedown="onchangeSetting('el_color_54');"></div><div class="editor_context_color" style="background-color:#ffe2d8;" onmousedown="onchangeSetting('el_color_55');"></div><div class="editor_context_color" style="background-color:#e6bcad;" onmousedown="onchangeSetting('el_color_56');"></div><div class="editor_context_color" style="background-color:#c89888;" onmousedown="onchangeSetting('el_color_57');"></div><div class="editor_context_color" style="background-color:#ae8273;" onmousedown="onchangeSetting('el_color_58');"></div><div class="editor_context_color" style="background-color:#896559;" onmousedown="onchangeSetting('el_color_59');"></div></div><div><div class="editor_context_color" style="background-color:#3f1f00;" onmousedown="onchangeSetting('el_color_60');"></div><div class="editor_context_color" style="background-color:#703800;" onmousedown="onchangeSetting('el_color_61');"></div><div class="editor_context_color" style="background-color:#a05000;" onmousedown="onchangeSetting('el_color_62');"></div><div class="editor_context_color" style="background-color:#d16800;" onmousedown="onchangeSetting('el_color_63');"></div><div class="editor_context_color" style="background-color:#ff7f00;" onmousedown="onchangeSetting('el_color_64');"></div><div class="editor_context_color" style="background-color:#ff952b;" onmousedown="onchangeSetting('el_color_65');"></div><div class="editor_context_color" style="background-color:#ffaa56;" onmousedown="onchangeSetting('el_color_66');"></div><div class="editor_context_color" style="background-color:#ffc082;" onmousedown="onchangeSetting('el_color_67');"></div><div class="editor_context_color" style="background-color:#ffd6ad;" onmousedown="onchangeSetting('el_color_68');"></div><div class="editor_context_color" style="background-color:#ffebd8;" onmousedown="onchangeSetting('el_color_69');"></div><div class="editor_context_color" style="background-color:#e4c7ac;" onmousedown="onchangeSetting('el_color_70');"></div><div class="editor_context_color" style="background-color:#c5a586;" onmousedown="onchangeSetting('el_color_71');"></div><div class="editor_context_color" style="background-color:#ab8e73;" onmousedown="onchangeSetting('el_color_72');"></div><div class="editor_context_color" style="background-color:#8b7159;" onmousedown="onchangeSetting('el_color_73');"></div></div><div><div class="editor_context_color" style="background-color:#332600;" onmousedown="onchangeSetting('el_color_74');"></div><div class="editor_context_color" style="background-color:#664c00;" onmousedown="onchangeSetting('el_color_75');"></div><div class="editor_context_color" style="background-color:#997200;" onmousedown="onchangeSetting('el_color_76');"></div><div class="editor_context_color" style="background-color:#cc9900;" onmousedown="onchangeSetting('el_color_77');"></div><div class="editor_context_color" style="background-color:#ffbf00;" onmousedown="onchangeSetting('el_color_78');"></div><div class="editor_context_color" style="background-color:#ffca2b;" onmousedown="onchangeSetting('el_color_79');"></div><div class="editor_context_color" style="background-color:#ffd456;" onmousedown="onchangeSetting('el_color_80');"></div><div class="editor_context_color" style="background-color:#ffdf82;" onmousedown="onchangeSetting('el_color_81');"></div><div class="editor_context_color" style="background-color:#ffeaad;" onmousedown="onchangeSetting('el_color_82');"></div><div class="editor_context_color" style="background-color:#fff5d8;" onmousedown="onchangeSetting('el_color_83');"></div><div class="editor_context_color" style="background-color:#eadbaf;" onmousedown="onchangeSetting('el_color_84');"></div><div class="editor_context_color" style="background-color:#c6b689;" onmousedown="onchangeSetting('el_color_85');"></div><div class="editor_context_color" style="background-color:#aa9c72;" onmousedown="onchangeSetting('el_color_86');"></div><div class="editor_context_color" style="background-color:#887b56;" onmousedown="onchangeSetting('el_color_87');"></div></div><div><div class="editor_context_color" style="background-color:#333300;" onmousedown="onchangeSetting('el_color_88');"></div><div class="editor_context_color" style="background-color:#545400;" onmousedown="onchangeSetting('el_color_89');"></div><div class="editor_context_color" style="background-color:#838300;" onmousedown="onchangeSetting('el_color_90');"></div><div class="editor_context_color" style="background-color:#baba02;" onmousedown="onchangeSetting('el_color_91');"></div><div class="editor_context_color" style="background-color:#d5d502;" onmousedown="onchangeSetting('el_color_92');"></div><div class="editor_context_color" style="background-color:#eeee00;" onmousedown="onchangeSetting('el_color_93');"></div><div class="editor_context_color" style="background-color:#ffff00;" onmousedown="onchangeSetting('el_color_94');"></div><div class="editor_context_color" style="background-color:#ffff49;" onmousedown="onchangeSetting('el_color_95');"></div><div class="editor_context_color" style="background-color:#ffff91;" onmousedown="onchangeSetting('el_color_96');"></div><div class="editor_context_color" style="background-color:#ffffd8;" onmousedown="onchangeSetting('el_color_97');"></div><div class="editor_context_color" style="background-color:#e7e7af;" onmousedown="onchangeSetting('el_color_98');"></div><div class="editor_context_color" style="background-color:#c6c687;" onmousedown="onchangeSetting('el_color_99');"></div><div class="editor_context_color" style="background-color:#afaf75;" onmousedown="onchangeSetting('el_color_100');"></div><div class="editor_context_color" style="background-color:#8b8b59;" onmousedown="onchangeSetting('el_color_101');"></div></div><div><div class="editor_context_color" style="background-color:#293f00;" onmousedown="onchangeSetting('el_color_102');"></div><div class="editor_context_color" style="background-color:#446000;" onmousedown="onchangeSetting('el_color_103');"></div><div class="editor_context_color" style="background-color:#658800;" onmousedown="onchangeSetting('el_color_104');"></div><div class="editor_context_color" style="background-color:#88b700;" onmousedown="onchangeSetting('el_color_105');"></div><div class="editor_context_color" style="background-color:#a8d600;" onmousedown="onchangeSetting('el_color_106');"></div><div class="editor_context_color" style="background-color:#cfff00;" onmousedown="onchangeSetting('el_color_107');"></div><div class="editor_context_color" style="background-color:#d0ff20;" onmousedown="onchangeSetting('el_color_108');"></div><div class="editor_context_color" style="background-color:#daff5a;" onmousedown="onchangeSetting('el_color_109');"></div><div class="editor_context_color" style="background-color:#e8ff9a;" onmousedown="onchangeSetting('el_color_110');"></div><div class="editor_context_color" style="background-color:#f3ffd3;" onmousedown="onchangeSetting('el_color_111');"></div><div class="editor_context_color" style="background-color:#d8e8ae;" onmousedown="onchangeSetting('el_color_112');"></div><div class="editor_context_color" style="background-color:#b5c589;" onmousedown="onchangeSetting('el_color_113');"></div><div class="editor_context_color" style="background-color:#9bab72;" onmousedown="onchangeSetting('el_color_114');"></div><div class="editor_context_color" style="background-color:#7b8956;" onmousedown="onchangeSetting('el_color_115');"></div></div><div><div class="editor_context_color" style="background-color:#1f3f00;" onmousedown="onchangeSetting('el_color_116');"></div><div class="editor_context_color" style="background-color:#336600;" onmousedown="onchangeSetting('el_color_117');"></div><div class="editor_context_color" style="background-color:#468c00;" onmousedown="onchangeSetting('el_color_118');"></div><div class="editor_context_color" style="background-color:#59b200;" onmousedown="onchangeSetting('el_color_119');"></div><div class="editor_context_color" style="background-color:#6cd800;" onmousedown="onchangeSetting('el_color_120');"></div><div class="editor_context_color" style="background-color:#7fff00;" onmousedown="onchangeSetting('el_color_121');"></div><div class="editor_context_color" style="background-color:#9bff38;" onmousedown="onchangeSetting('el_color_122');"></div><div class="editor_context_color" style="background-color:#b6ff6d;" onmousedown="onchangeSetting('el_color_123');"></div><div class="editor_context_color" style="background-color:#d1ffa3;" onmousedown="onchangeSetting('el_color_124');"></div><div class="editor_context_color" style="background-color:#ebffd8;" onmousedown="onchangeSetting('el_color_125');"></div><div class="editor_context_color" style="background-color:#c6e4aa;" onmousedown="onchangeSetting('el_color_126');"></div><div class="editor_context_color" style="background-color:#a6c688;" onmousedown="onchangeSetting('el_color_127');"></div><div class="editor_context_color" style="background-color:#8dab71;" onmousedown="onchangeSetting('el_color_128');"></div><div class="editor_context_color" style="background-color:#728d59;" onmousedown="onchangeSetting('el_color_129');"></div></div><div><div class="editor_context_color" style="background-color:#003300;" onmousedown="onchangeSetting('el_color_130');"></div><div class="editor_context_color" style="background-color:#005b00;" onmousedown="onchangeSetting('el_color_131');"></div><div class="editor_context_color" style="background-color:#008400;" onmousedown="onchangeSetting('el_color_132');"></div><div class="editor_context_color" style="background-color:#00ad00;" onmousedown="onchangeSetting('el_color_133');"></div><div class="editor_context_color" style="background-color:#00d600;" onmousedown="onchangeSetting('el_color_134');"></div><div class="editor_context_color" style="background-color:#00ff00;" onmousedown="onchangeSetting('el_color_135');"></div><div class="editor_context_color" style="background-color:#38ff38;" onmousedown="onchangeSetting('el_color_136');"></div><div class="editor_context_color" style="background-color:#6dff6d;" onmousedown="onchangeSetting('el_color_137');"></div><div class="editor_context_color" style="background-color:#a3ffa3;" onmousedown="onchangeSetting('el_color_138');"></div><div class="editor_context_color" style="background-color:#d8ffd8;" onmousedown="onchangeSetting('el_color_139');"></div><div class="editor_context_color" style="background-color:#ade5ad;" onmousedown="onchangeSetting('el_color_140');"></div><div class="editor_context_color" style="background-color:#8ac88a;" onmousedown="onchangeSetting('el_color_141');"></div><div class="editor_context_color" style="background-color:#73ad73;" onmousedown="onchangeSetting('el_color_142');"></div><div class="editor_context_color" style="background-color:#578857;" onmousedown="onchangeSetting('el_color_143');"></div></div><div><div class="editor_context_color" style="background-color:#002613;" onmousedown="onchangeSetting('el_color_144');"></div><div class="editor_context_color" style="background-color:#005128;" onmousedown="onchangeSetting('el_color_145');"></div><div class="editor_context_color" style="background-color:#007c3e;" onmousedown="onchangeSetting('el_color_146');"></div><div class="editor_context_color" style="background-color:#00a854;" onmousedown="onchangeSetting('el_color_147');"></div><div class="editor_context_color" style="background-color:#00d369;" onmousedown="onchangeSetting('el_color_148');"></div><div class="editor_context_color" style="background-color:#00ff7f;" onmousedown="onchangeSetting('el_color_149');"></div><div class="editor_context_color" style="background-color:#38ff9b;" onmousedown="onchangeSetting('el_color_150');"></div><div class="editor_context_color" style="background-color:#6dffb6;" onmousedown="onchangeSetting('el_color_151');"></div><div class="editor_context_color" style="background-color:#a3ffd1;" onmousedown="onchangeSetting('el_color_152');"></div><div class="editor_context_color" style="background-color:#d8ffeb;" onmousedown="onchangeSetting('el_color_153');"></div><div class="editor_context_color" style="background-color:#aee4c8;" onmousedown="onchangeSetting('el_color_154');"></div><div class="editor_context_color" style="background-color:#89c6a7;" onmousedown="onchangeSetting('el_color_155');"></div><div class="editor_context_color" style="background-color:#71aa8d;" onmousedown="onchangeSetting('el_color_156');"></div><div class="editor_context_color" style="background-color:#5a8c72;" onmousedown="onchangeSetting('el_color_157');"></div></div><div><div class="editor_context_color" style="background-color:#00332a;" onmousedown="onchangeSetting('el_color_158');"></div><div class="editor_context_color" style="background-color:#005446;" onmousedown="onchangeSetting('el_color_159');"></div><div class="editor_context_color" style="background-color:#007561;" onmousedown="onchangeSetting('el_color_160');"></div><div class="editor_context_color" style="background-color:#00967d;" onmousedown="onchangeSetting('el_color_161');"></div><div class="editor_context_color" style="background-color:#00c5a5;" onmousedown="onchangeSetting('el_color_162');"></div><div class="editor_context_color" style="background-color:#00e6c0;" onmousedown="onchangeSetting('el_color_163');"></div><div class="editor_context_color" style="background-color:#00ffd4;" onmousedown="onchangeSetting('el_color_164');"></div><div class="editor_context_color" style="background-color:#49ffe0;" onmousedown="onchangeSetting('el_color_165');"></div><div class="editor_context_color" style="background-color:#91ffec;" onmousedown="onchangeSetting('el_color_166');"></div><div class="editor_context_color" style="background-color:#d8fff8;" onmousedown="onchangeSetting('el_color_167');"></div><div class="editor_context_color" style="background-color:#b1e7dd;" onmousedown="onchangeSetting('el_color_168');"></div><div class="editor_context_color" style="background-color:#8ac5ba;" onmousedown="onchangeSetting('el_color_169');"></div><div class="editor_context_color" style="background-color:#72ada2;" onmousedown="onchangeSetting('el_color_170');"></div><div class="editor_context_color" style="background-color:#588980;" onmousedown="onchangeSetting('el_color_171');"></div></div><div><div class="editor_context_color" style="background-color:#002133;" onmousedown="onchangeSetting('el_color_172');"></div><div class="editor_context_color" style="background-color:#003d5b;" onmousedown="onchangeSetting('el_color_173');"></div><div class="editor_context_color" style="background-color:#005884;" onmousedown="onchangeSetting('el_color_174');"></div><div class="editor_context_color" style="background-color:#0073ad;" onmousedown="onchangeSetting('el_color_175');"></div><div class="editor_context_color" style="background-color:#008ed6;" onmousedown="onchangeSetting('el_color_176');"></div><div class="editor_context_color" style="background-color:#00a9ff;" onmousedown="onchangeSetting('el_color_177');"></div><div class="editor_context_color" style="background-color:#38bcff;" onmousedown="onchangeSetting('el_color_178');"></div><div class="editor_context_color" style="background-color:#6dceff;" onmousedown="onchangeSetting('el_color_179');"></div><div class="editor_context_color" style="background-color:#a3e0ff;" onmousedown="onchangeSetting('el_color_180');"></div><div class="editor_context_color" style="background-color:#d8f2ff;" onmousedown="onchangeSetting('el_color_181');"></div><div class="editor_context_color" style="background-color:#aed4e7;" onmousedown="onchangeSetting('el_color_182');"></div><div class="editor_context_color" style="background-color:#86b0c5;" onmousedown="onchangeSetting('el_color_183');"></div><div class="editor_context_color" style="background-color:#7197aa;" onmousedown="onchangeSetting('el_color_184');"></div><div class="editor_context_color" style="background-color:#597989;" onmousedown="onchangeSetting('el_color_185');"></div></div><div><div class="editor_context_color" style="background-color:#001133;" onmousedown="onchangeSetting('el_color_186');"></div><div class="editor_context_color" style="background-color:#002266;" onmousedown="onchangeSetting('el_color_187');"></div><div class="editor_context_color" style="background-color:#003399;" onmousedown="onchangeSetting('el_color_188');"></div><div class="editor_context_color" style="background-color:#0044cc;" onmousedown="onchangeSetting('el_color_189');"></div><div class="editor_context_color" style="background-color:#0055ff;" onmousedown="onchangeSetting('el_color_190');"></div><div class="editor_context_color" style="background-color:#2b71ff;" onmousedown="onchangeSetting('el_color_191');"></div><div class="editor_context_color" style="background-color:#568eff;" onmousedown="onchangeSetting('el_color_192');"></div><div class="editor_context_color" style="background-color:#82abff;" onmousedown="onchangeSetting('el_color_193');"></div><div class="editor_context_color" style="background-color:#adc8ff;" onmousedown="onchangeSetting('el_color_194');"></div><div class="editor_context_color" style="background-color:#d8e5ff;" onmousedown="onchangeSetting('el_color_195');"></div><div class="editor_context_color" style="background-color:#abbfe6;" onmousedown="onchangeSetting('el_color_196');"></div><div class="editor_context_color" style="background-color:#8a9dc5;" onmousedown="onchangeSetting('el_color_197');"></div><div class="editor_context_color" style="background-color:#788aae;" onmousedown="onchangeSetting('el_color_198');"></div><div class="editor_context_color" style="background-color:#5d6d8c;" onmousedown="onchangeSetting('el_color_199');"></div></div><div><div class="editor_context_color" style="background-color:#00003f;" onmousedown="onchangeSetting('el_color_200');"></div><div class="editor_context_color" style="background-color:#000070;" onmousedown="onchangeSetting('el_color_201');"></div><div class="editor_context_color" style="background-color:#0000a0;" onmousedown="onchangeSetting('el_color_202');"></div><div class="editor_context_color" style="background-color:#0000d1;" onmousedown="onchangeSetting('el_color_203');"></div><div class="editor_context_color" style="background-color:#0000ff;" onmousedown="onchangeSetting('el_color_204');"></div><div class="editor_context_color" style="background-color:#2b2bff;" onmousedown="onchangeSetting('el_color_205');"></div><div class="editor_context_color" style="background-color:#5656ff;" onmousedown="onchangeSetting('el_color_206');"></div><div class="editor_context_color" style="background-color:#8282ff;" onmousedown="onchangeSetting('el_color_207');"></div><div class="editor_context_color" style="background-color:#adadff;" onmousedown="onchangeSetting('el_color_208');"></div><div class="editor_context_color" style="background-color:#d8d8ff;" onmousedown="onchangeSetting('el_color_209');"></div><div class="editor_context_color" style="background-color:#adade5;" onmousedown="onchangeSetting('el_color_210');"></div><div class="editor_context_color" style="background-color:#8989c6;" onmousedown="onchangeSetting('el_color_211');"></div><div class="editor_context_color" style="background-color:#7575af;" onmousedown="onchangeSetting('el_color_212');"></div><div class="editor_context_color" style="background-color:#5d5d8c;" onmousedown="onchangeSetting('el_color_213');"></div></div><div><div class="editor_context_color" style="background-color:#190033;" onmousedown="onchangeSetting('el_color_214');"></div><div class="editor_context_color" style="background-color:#330066;" onmousedown="onchangeSetting('el_color_215');"></div><div class="editor_context_color" style="background-color:#4c0099;" onmousedown="onchangeSetting('el_color_216');"></div><div class="editor_context_color" style="background-color:#6600cc;" onmousedown="onchangeSetting('el_color_217');"></div><div class="editor_context_color" style="background-color:#7f00ff;" onmousedown="onchangeSetting('el_color_218');"></div><div class="editor_context_color" style="background-color:#952bff;" onmousedown="onchangeSetting('el_color_219');"></div><div class="editor_context_color" style="background-color:#aa56ff;" onmousedown="onchangeSetting('el_color_220');"></div><div class="editor_context_color" style="background-color:#c082ff;" onmousedown="onchangeSetting('el_color_221');"></div><div class="editor_context_color" style="background-color:#d6adff;" onmousedown="onchangeSetting('el_color_222');"></div><div class="editor_context_color" style="background-color:#ebd8ff;" onmousedown="onchangeSetting('el_color_223');"></div><div class="editor_context_color" style="background-color:#c8ade4;" onmousedown="onchangeSetting('el_color_224');"></div><div class="editor_context_color" style="background-color:#a588c4;" onmousedown="onchangeSetting('el_color_225');"></div><div class="editor_context_color" style="background-color:#8f72ad;" onmousedown="onchangeSetting('el_color_226');"></div><div class="editor_context_color" style="background-color:#705988;" onmousedown="onchangeSetting('el_color_227');"></div></div><div><div class="editor_context_color" style="background-color:#330033;" onmousedown="onchangeSetting('el_color_228');"></div><div class="editor_context_color" style="background-color:#5b005b;" onmousedown="onchangeSetting('el_color_229');"></div><div class="editor_context_color" style="background-color:#840084;" onmousedown="onchangeSetting('el_color_230');"></div><div class="editor_context_color" style="background-color:#ad00ad;" onmousedown="onchangeSetting('el_color_231');"></div><div class="editor_context_color" style="background-color:#d600d6;" onmousedown="onchangeSetting('el_color_232');"></div><div class="editor_context_color" style="background-color:#ff00ff;" onmousedown="onchangeSetting('el_color_233');"></div><div class="editor_context_color" style="background-color:#ff38ff;" onmousedown="onchangeSetting('el_color_234');"></div><div class="editor_context_color" style="background-color:#ff6dff;" onmousedown="onchangeSetting('el_color_235');"></div><div class="editor_context_color" style="background-color:#ffa3ff;" onmousedown="onchangeSetting('el_color_236');"></div><div class="editor_context_color" style="background-color:#ffd8ff;" onmousedown="onchangeSetting('el_color_237');"></div><div class="editor_context_color" style="background-color:#e3a8e3;" onmousedown="onchangeSetting('el_color_238');"></div><div class="editor_context_color" style="background-color:#c689c6;" onmousedown="onchangeSetting('el_color_239');"></div><div class="editor_context_color" style="background-color:#aa71aa;" onmousedown="onchangeSetting('el_color_240');"></div><div class="editor_context_color" style="background-color:#8a598a;" onmousedown="onchangeSetting('el_color_241');"></div></div><div><div class="editor_context_color" style="background-color:#330019;" onmousedown="onchangeSetting('el_color_242');"></div><div class="editor_context_color" style="background-color:#660033;" onmousedown="onchangeSetting('el_color_243');"></div><div class="editor_context_color" style="background-color:#99004c;" onmousedown="onchangeSetting('el_color_244');"></div><div class="editor_context_color" style="background-color:#cc0066;" onmousedown="onchangeSetting('el_color_245');"></div><div class="editor_context_color" style="background-color:#ff007f;" onmousedown="onchangeSetting('el_color_246');"></div><div class="editor_context_color" style="background-color:#ff2b95;" onmousedown="onchangeSetting('el_color_247');"></div><div class="editor_context_color" style="background-color:#ff56aa;" onmousedown="onchangeSetting('el_color_248');"></div><div class="editor_context_color" style="background-color:#ff82c0;" onmousedown="onchangeSetting('el_color_249');"></div><div class="editor_context_color" style="background-color:#ffadd6;" onmousedown="onchangeSetting('el_color_250');"></div><div class="editor_context_color" style="background-color:#ffd8eb;" onmousedown="onchangeSetting('el_color_251');"></div><div class="editor_context_color" style="background-color:#e6b2cb;" onmousedown="onchangeSetting('el_color_252');"></div><div class="editor_context_color" style="background-color:#c78ba8;" onmousedown="onchangeSetting('el_color_253');"></div><div class="editor_context_color" style="background-color:#ac748f;" onmousedown="onchangeSetting('el_color_254');"></div><div class="editor_context_color" style="background-color:#8d5c74;" onmousedown="onchangeSetting('el_color_255');"></div></div></div></div>
+
+</div>
+<script src="Remote%20control%20Arduino%20-%20RemoteXY_fichiers/watch.js" type="text/javascript"></script>
+<script type="text/javascript">
+try { var yaCounter25665671 = new Ya.Metrika({id:25665671});
+} catch(e) { }
+</script>    
+<noscript><div><img src="//mc.yandex.ru/watch/25665671" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<script type="text/javascript">
+var usertokens=[];
+</script>
+
+
+<canvas style="position: absolute; display: none; left: 1013.5px; top: 668.5px;" width="145" height="53"></canvas></body></html>
